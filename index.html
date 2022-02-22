@@ -7,7 +7,7 @@
     <title>5V-V</title>
 </head>
 <script src="js/jqs.js"></script>
-<script language="javascript">
+<script type="text/javascript">
     /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
      * Build: http://modernizr.com/download/#-boxshadow-input-inputtypes-shiv-cssclasses-testprop-testallprops-domprefixes-css_pointerevents-forms_placeholder-load
      */
@@ -320,7 +320,7 @@
 
     function openAppReq() {
         const ajaxObj = new XMLHttpRequest();
-        ajaxObj.open('get', 'https://manage.jiuyu.net/api/shortlink/get?id=' + id);
+        ajaxObj.open('get', 'https://manage.jiuyu.net/api/shortlink/library/get?id=' + id);
         ajaxObj.send();
         ajaxObj.onreadystatechange = function () {
             if (ajaxObj.readyState === 4 && ajaxObj.status === 200) {
