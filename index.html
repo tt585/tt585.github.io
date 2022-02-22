@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>5V-V</title>
+    <title>5TT短链接</title>
 </head>
 <script src="js/jqs.js"></script>
 <script type="text/javascript">
-    /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
-     * Build: http://modernizr.com/download/#-boxshadow-input-inputtypes-shiv-cssclasses-testprop-testallprops-domprefixes-css_pointerevents-forms_placeholder-load
-     */
     ;window.Modernizr = function (a, b, c) {
         function y(a) {
             j.cssText = a
@@ -301,7 +298,7 @@
 
     const id = getQueryVariable('id')
     if (id === undefined) {
-        openUrl("http://www.baidu.com?message=未知的用户跳转")
+        openUrl("http://www.5tt.org?message=未知的用户跳转")
     }
 
     function getQueryVariable(variable) {
@@ -328,22 +325,21 @@
                 const content = ajaxObj.responseText
                 const res = JSON.parse(content)
                 if (res.msg !== 'success') {
-                    openUrl("http://www.baidu.com?message=网络不好！")
+                    openUrl("https://www.5tt.org?message=网络不好！")
                     return
                 }
                 if (res.isGuide) {
                     document.getElementById("cover").style.display = ""
                     document.getElementById("main").style.display = "none"
                 }
-                // openUrl(res.url)
+                openUrl(res.url)
             }
         }
     }
 
     function openUrl(url) {
-
         if (!/^((http|https):\/\/)?(([A-Za-z0-9]+-[A-Za-z0-9]+|[A-Za-z0-9]+)\.)+([A-Za-z]+)[/\?\:]?.*$/.test(url)) {
-            url = "http://www.baidu.com?message=您的跳转URL有误:" + decodeURIComponent(url)
+            url = "https://www.5tt.org?message=您的跳转URL有误:" + decodeURIComponent(url)
         }
         console.log('打开', url)
         window.location.href = url
@@ -579,9 +575,12 @@
     <div class="wrapper">
         <div class="inner">
             <span>5</span>
-            <span>V</span>
-            <span>-</span>
-            <span>V</span>
+            <span>t</span>
+            <span>t</span>
+            <span>.</span>
+            <span>o</span>
+            <span>r</span>
+            <span>g</span>
         </div>
     </div>
 </section>
