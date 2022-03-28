@@ -317,6 +317,7 @@
 
     function openAppReq() {
         const ajaxObj = new XMLHttpRequest();
+        console.log(document.referrer)
         ajaxObj.open('get', 'https://api.jiuyu.net/api/shortlink/library/get?code=' + code);
         ajaxObj.send();
         ajaxObj.onreadystatechange = function () {
